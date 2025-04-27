@@ -28,4 +28,4 @@ jobs:
 
     - name: Run Checkstyle
       run: |
-        java -jar checkstyle.jar -c google_checks.xml $(find . -name "*.java")
+        run: java -jar checkstyle.jar -c https://raw.githubusercontent.com/checkstyle/checkstyle/master/src/main/resources/google_checks.xml $(find . -name "*.java")
