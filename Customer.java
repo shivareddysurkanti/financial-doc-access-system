@@ -1,9 +1,12 @@
+import java.sql.Timestamp;
+import java.util.Date;
+
 public class Customer {
 
 	private int customerID;
-	private string name;
-	private string last4SSN;
-	private string email;
+	private String name;
+	private String last4SSN;
+	private String email;
 	private int isActive;
 	private Timestamp createdAt;
 
