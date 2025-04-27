@@ -24,8 +24,8 @@ jobs:
     - name: Download Checkstyle
       run: |
         curl -L -o checkstyle.jar https://github.com/checkstyle/checkstyle/releases/download/checkstyle-10.12.4/checkstyle-10.12.4-all.jar
-        curl -L -o google_checks.xml https://raw.githubusercontent.com/checkstyle/checkstyle/master/src/main/resources/google_checks.xml
+        curl -L -o google_checks.xml https://raw.githubusercontent.com/checkstyle/checkstyle/10.12.4/src/main/resources/google_checks.xml
 
     - name: Run Checkstyle
       run: |
-        run: java -jar checkstyle.jar -c https://raw.githubusercontent.com/checkstyle/checkstyle/master/src/main/resources/google_checks.xml $(find . -name "*.java")
+        java -jar checkstyle.jar -c google_checks.xml $(find . -name "*.java")
